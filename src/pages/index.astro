@@ -1,0 +1,21 @@
+---
+import AboutSection from '../components/About';
+import ContactModal from '../components/ContactModal.jsx';
+import ContactSection from '../components/ContactSection.jsx';
+import JumbotronComponent from '../components/Jumbotron.jsx';
+import MyJourney from '../components/MyJourney.jsx';
+import WorkSection from '../components/WorkSection.jsx';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<header class='App-header'>
+		<JumbotronComponent client:visible />
+		<AboutSection />
+		<WorkSection client:visible />
+		<MyJourney />
+		<ContactSection client:visible />
+		<ContactModal client:idle/>
+	</header>
+</Layout>
+
